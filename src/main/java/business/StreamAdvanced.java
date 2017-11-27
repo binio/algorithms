@@ -35,4 +35,9 @@ public class StreamAdvanced {
         personsByAge
                 .forEach((age, p) -> System.out.format("age %s: %s\n", age, p));
     }
+
+    public void averageAge() {
+        Double averageAge = people.stream().collect(Collectors.averagingInt(p->p.getAge()));
+        System.out.println("Average age: "+averageAge);
+    }
 }
