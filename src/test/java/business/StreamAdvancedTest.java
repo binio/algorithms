@@ -23,6 +23,6 @@ public class StreamAdvancedTest {
 
     @Test
     public void averageAge() throws Exception {
-        sa.averageAge();
+        sa.averageAge();//
     }
 }
