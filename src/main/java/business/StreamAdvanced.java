@@ -40,4 +40,9 @@ public class StreamAdvanced {
         Double averageAge = people.stream().collect(Collectors.averagingInt(p->p.getAge()));
         System.out.println("Average age: "+averageAge);
     }
+
+    public void sumAge() {
+        Integer sumAge = people.stream().collect(Collectors.summingInt(p->p.getAge()));
+        System.out.println("Sum age: "+sumAge);
+    }
 }

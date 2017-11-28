@@ -25,4 +25,9 @@ public class StreamAdvancedTest {
     public void averageAge() throws Exception {
         sa.averageAge();//
     }
+
+    @Test
+    public void sumAge() {
+        sa.sumAge();
+    }
 }
