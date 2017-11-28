@@ -35,4 +35,9 @@ public class StreamAdvancedTest {
     public void joiningAge() throws Exception {
         sa.joiningAge();
     }
+
+    @Test
+    public void toMap() throws Exception {
+        sa.toMap();
+    }
 }

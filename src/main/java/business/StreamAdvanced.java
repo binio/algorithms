@@ -53,4 +53,14 @@ public class StreamAdvanced {
                 .collect(Collectors.joining(" and ", "People: ", " are of legal age!"));
         System.out.println(phrase);
     }
+
+    public void toMap() {
+        Map<Integer, String> map = people.stream()
+                .collect(Collectors.toMap(
+                        p -> p.age,
+                        p -> p.name,
+                        (name1, name2) -> name1 + ";" + name2)
+                );
+        System.out.println(map);
+    }
 }
