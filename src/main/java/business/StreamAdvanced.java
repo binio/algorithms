@@ -45,4 +45,12 @@ public class StreamAdvanced {
         Integer sumAge = people.stream().collect(Collectors.summingInt(p->p.getAge()));
         System.out.println("Sum age: "+sumAge);
     }
+
+    public void joiningAge() {
+        String phrase = people.stream()
+                .filter(p->p.age >= 18)
+                .map(p->p.name)
+                .collect(Collectors.joining(" and ", "People: ", " are of legal age!"));
+        System.out.println(phrase);
+    }
 }

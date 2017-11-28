@@ -30,4 +30,9 @@ public class StreamAdvancedTest {
     public void sumAge() {
         sa.sumAge();
     }
+
+    @Test
+    public void joiningAge() throws Exception {
+        sa.joiningAge();
+    }
 }
