@@ -8,6 +8,11 @@ import static org.junit.Assert.*;
 
 @RunWith(JUnit4.class)
 public class StreamAdvancedTest {
+    @Test
+    public void customCollector() throws Exception {
+        sa.customCollector();
+    }
+
     StreamAdvanced sa = new StreamAdvanced();
 
     @Test
