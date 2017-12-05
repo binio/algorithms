@@ -78,4 +78,8 @@ public class StreamAdvanced {
         String names = people.stream().collect(personNameCollector);
         System.out.println(names);
     }
+
+    public void customCollectorClassicImpl() {
+
+    }
 }
