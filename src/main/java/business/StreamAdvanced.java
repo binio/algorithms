@@ -3,6 +3,8 @@ package business;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.StringJoiner;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
@@ -62,5 +64,18 @@ public class StreamAdvanced {
                         (name1, name2) -> name1 + ";" + name2)
                 );
         System.out.println(map);
+    }
+
+    /*
+    * We want to transform all persons of the stream into a single string consisting of all names in upper letters separated by the | pipe character.*/
+    public void customCollector() {
+        Collector<Person,StringJoiner,String> personNameCollector = Collector.of(
+                ()-> new StringJoiner("|"), //supplier
+                (j,p) -> j.add(p.name.toUpperCase()),//combiner
+                (j1, j2) -> j1.merge(j2),            //accumulator
+                StringJoiner::toString);             //finisher
+
+        String names = people.stream().collect(personNameCollector);
+        System.out.println(names);
     }
 }
