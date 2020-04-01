@@ -23,7 +23,7 @@ public class MaxChar {
 
             charMap.putIfAbsent(a,1);
         }
-        Integer maxOccurrences = new Integer(Collections.max(charMap.values()));
+        Integer maxOccurrences = Integer.valueOf(Collections.max(charMap.values())); //sort of..
 
         List<Character> result = charMap.entrySet()
                 .stream()
