@@ -29,4 +29,26 @@ public class MaxCharExcersise {
 
         return maxChar;
     }
+
+    public static char findMaxCharV2(String input) {
+        char[] inputArr = input.toCharArray();
+        HashMap<Character,Integer> counter = new HashMap<>();
+        int maxCount = 0;
+        char maxChar = ' ';
+
+        for(int i=0; i<inputArr.length; i++) {
+                counter.computeIfPresent(inputArr[i], (key, value) -> value + 1);
+                counter.computeIfAbsent(inputArr[i], key -> 1);
+        }
+
+        for(Map.Entry<Character,Integer> entry : counter.entrySet()) {
+            if(entry.getValue() > maxCount) {
+                maxCount = entry.getValue();
+                maxChar = entry.getKey();
+            }
+        }
+
+
+        return maxChar;
+    }
 }

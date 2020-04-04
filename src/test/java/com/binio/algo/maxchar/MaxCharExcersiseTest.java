@@ -12,4 +12,11 @@ public class MaxCharExcersiseTest {
         assertEquals('i', MaxCharExcersise.findMaxChar("bilirubina"));
         assertEquals('o', MaxCharExcersise.findMaxChar("Haloooo"));
     }
+
+    @Test
+    public void findMaxCharV2() {
+        assertEquals('c', MaxCharExcersise.findMaxCharV2("circularc"));
+        assertEquals('i', MaxCharExcersise.findMaxCharV2("bilirubina"));
+        assertEquals('o', MaxCharExcersise.findMaxCharV2("Haloooo"));
+    }
 }
