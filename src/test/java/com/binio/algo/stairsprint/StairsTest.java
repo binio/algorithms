@@ -11,4 +11,10 @@ public class StairsTest {
         String expected = "'#  '\n'## '\n'###'\n";
         assertEquals(expected, Stairs.printStairs(3));
     }
+
+    @Test
+    public void printStairsV2() {
+        String expected = "'#  '\n'## '\n'###'\n";
+        assertEquals(expected, Stairs.printStairsV2(3, 0, new StringBuffer()));
+    }
 }

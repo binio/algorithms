@@ -34,4 +34,22 @@ public class Stairs {
         //System.out.println(buffer.toString());
         return buffer.toString();
     }
+
+    public static String printStairsV2(int steps, int count, StringBuffer buffer) {
+        if(steps != 0) {
+            buffer.append("'");
+
+            for (int i = 0; i <= count; i++) {
+                buffer.append('#');
+            }
+            for (int r = 0; r < steps-1 ; r++) {
+                buffer.append(' ');
+            }
+
+            buffer.append("'\n");
+
+            printStairsV2(steps - 1, count + 1, buffer);
+        }
+        return buffer.toString();
+    }
 }
