@@ -1,5 +1,6 @@
 package com.binio.algo.maxchar;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,4 +52,25 @@ public class MaxCharExcersise {
 
         return maxChar;
     }
+
+//    public static char findMaxChar(String input) {
+//        char[] inputArr = input.toCharArray();
+//        Map<Character, Integer> counter = new HashMap<>();
+//        char maxChar = ' ';
+//        int maxCount = 0;
+//
+//        for(int i=0; i<inputArr.length; i++) {
+//            counter.computeIfAbsent(inputArr[i],key ->1);
+//            counter.computeIfPresent(inputArr[i], (k,v) -> v+1);
+//        }
+//        for(Map.Entry<Character,Integer> entry : counter.entrySet()) {
+//            if(entry.getValue() > maxCount) {
+//                maxCount = entry.getValue();
+//                maxChar = entry.getKey();
+//            }
+//        }
+//
+//
+//        return maxChar;
+//    }
 }
