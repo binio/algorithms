@@ -35,6 +35,23 @@ public class AnagramExcersise {
 //        }
 //
 //        return isAnagram;
-        return true;
+        boolean isAnagram = false;
+        String copyOfA = a.replace("\\s","");
+        String copyOfB = b.replace("\\s","");
+
+        if(copyOfA.length()!= copyOfB.length()){
+            return false;
+        } else {
+            char[] arrayA = copyOfA.toCharArray();
+            char[] arrayB = copyOfB.toCharArray();
+
+            Arrays.sort(arrayA);
+            Arrays.sort(arrayB);
+
+            isAnagram =  Arrays.equals(arrayA,arrayB);
+        }
+
+
+        return isAnagram;
     }
 }
